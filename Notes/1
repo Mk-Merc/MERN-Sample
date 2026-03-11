@@ -1,3 +1,5 @@
+Notes for the package.json
+
 When creating a Express Project, you are required to create a package.json first because it keeps track of which libraries you installed, and you don't have to upload the node_modules folder in GitHub because it's too big when you can just upload your package.json so people can install it by typing "npm install: in their terminal. Package.json gets updated automatically whenever you install something. Package.json is basically an ID of your project.
 
 
