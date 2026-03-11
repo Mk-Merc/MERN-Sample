@@ -10,6 +10,8 @@ router.get('/', (req, res) => {
 });
 
 // GET single note
+// the colon in /:id tells Express to capture that part of the URL,
+// and put it in req.params with the name 'id'
 router.get('/:id', (req, res) => {
     // This is called destructering
     // It's a JS shortcut to extract values from objects or arrays
