@@ -1,0 +1,31 @@
+When creating a Express Project, you are required to create a package.json first because it keeps track of which libraries you installed, and you don't have to upload the node_modules folder in GitHub because it's too big when you can just upload your package.json so people can install it by typing "npm install: in their terminal. Package.json gets updated automatically whenever you install something. Package.json is basically an ID of your project.
+
+
+"version": "1.0.0", = Format: Major.Minor.Patch
+Major: Big changes that break things
+Minor: New features that don't break things
+Patch: Bug fixes
+
+
+"main": "server.js", = When someone runs your project, Node.js will execute server.js first. If "main" didn't exist, Node.js would default to executing index.js first. "main" is basically an instruction manual that tells Node.js what to run first. The reason why server.js is executed first because it creates the actual server, which is important in order for your project to run. Everything (routes, database, etc) depends on it. Without server.js, your project is useless
+
+
+"test": "echo \"Error: no test specified\" && exit 1", = It is a command when you type npm test. It's currently a placeholder that prints an error if there's a bug on one of your codes.
+
+
+"start": "node server.js", = It is a command when you type npm start. It is for the real, live version of your project (the ones users actually use). Node server is used, so if there's a crash happened, then it will stay crashed until it gets fixed 
+
+
+"dev": "nodemon server.js" = It is a command when you type npm run dev. It is for development of your project (testing or debuggin). Nodemon is used, so it automatically restarts the server when you changed a code
+
+
+"type": "commonjs", = This just tells how you want to borrow code from other files. Commonjs is used, so we use exports and require. Commonjs is an old school way. It'll be better if module is used because it can only import specific method or something
+
+
+"dependencies": = It's a list of libraries that is need for your project to run
+
+
+"dotenv": "^17.3.1", = A library that loads environment variables (e.g., port of the server, password of your admin account, api keys, etc...) from an .env file (it's basically a secret text file). On GitHub you have to type a certain code to prevent this file from getting uploaded
+
+
+"express": "^5.2.1" = A library that offers minimalist web framework

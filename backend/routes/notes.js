@@ -1,8 +1,8 @@
 const express = require('express');
 
+// Creates a new router object that can have its own routes and middleware
+// It's like a mini Express application dedicated to a specific part of your site
 const router = express.Router();
-
-module.exports = router;
 
 // GET notes
 router.get('/', (req, res) => {
@@ -11,6 +11,9 @@ router.get('/', (req, res) => {
 
 // GET single note
 router.get('/:id', (req, res) => {
+    // This is called destructering
+    // It's a JS shortcut to extract values from objects or arrays
+    // Same as const id = req.params.id
     const { id } = req.params;
     res.json({ message: `You requested node with ID: ${id}` });
 });
@@ -31,3 +34,8 @@ router.patch('/:id', (req, res) => {
     const { id } = req.params;
     res.json({ message: `Note with ID: ${id} updated successfully!` });
 });
+
+// Exports the router object so it can be used in other parts of the application
+// "module" is the JavaScript file
+// Every javascript file is a module
+module.exports = router;
